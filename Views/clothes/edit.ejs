@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Garment</title>
+</head>
+
+<body>
+  <h1>Edit <%= garment.name %></h1>
+  <form action="/clothes/<%= garment._id %>/?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="<%= garment.name %>" />
+
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="decription" placeholder="<%= garment.description %>" />
+
+    <label for="isAvailable">Is Available?</label>
+    <input type="checkbox" name="isAvailable" <% if (garment.isAvailable) { %>checked<% } %> >
+
+    <button type="submit">Update Garment</button>
+  </form>
+  <a href="/clothes">Back to Garments</a>
+</body>
+
+</html>

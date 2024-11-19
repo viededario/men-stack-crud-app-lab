@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Garments</title>
+  </head>
+  <body>
+    <h1>All Garments</h1>
+    <ul>
+      <% clothes.forEach((garment) => {
+        %>
+      <li>
+        <a href="/clothes/<%= garment._id %>"><%= garment.name %></a>
+      </li>
+      <% }) %>
+    </ul>
+    <a href="/clothes/new">Add New Garments</a>
+  </body>
+</html>
